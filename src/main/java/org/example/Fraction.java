@@ -61,6 +61,14 @@ public class Fraction {
         return new Fraction(newNominator, newDenominator);
     }
 
+    public Fraction reciprocal(){
+        try{
+            return new Fraction(getNominator(),getDenominater()).shorten();
+        }catch (DivisionByZeroExeception e){
+            throw new RuntimeException(e);
+        }
+    }
+
     private int gcd(int a, int b) {
         if (b == 0)        return gcd(b, a % b);
         return a;

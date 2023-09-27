@@ -59,4 +59,13 @@ class FractionTest {
         assertEquals(1, newFraction.getNominator());
         assertEquals(1, newFraction.getDenominater());
     }
+
+    @Test
+     void reciprocal() throws DivisionByZeroExeception {
+        Fraction f = new Fraction( 3,4);
+        Fraction result = f.reciprocal();
+
+        assertEquals(4,result.getNominator());
+        assertEquals(3,result.getDenominater());
+    }
 }
