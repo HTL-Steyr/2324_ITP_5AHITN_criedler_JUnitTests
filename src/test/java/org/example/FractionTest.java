@@ -14,7 +14,7 @@ class FractionTest {
 
         Fraction shortened = f.shorten();
 
-        assertEquals(3, shortened.getNominator());
+        assertEquals(3, shortened.getNumerator());
         assertEquals(1, shortened.getDenominater());
     }
 
@@ -26,7 +26,7 @@ class FractionTest {
         Fraction newFraction = fraction.add(new Fraction(1, 2));
         newFraction = newFraction.shorten();
 
-        assertEquals(1, newFraction.getNominator());
+        assertEquals(1, newFraction.getNumerator());
         assertEquals(1, newFraction.getDenominater());
     }
 
@@ -36,7 +36,7 @@ class FractionTest {
         Fraction newFraction = fraction.sub(new Fraction(1, 2));
         newFraction = newFraction.shorten();
 
-        assertEquals(0, newFraction.getNominator());
+        assertEquals(0, newFraction.getNumerator());
         assertEquals(1, newFraction.getDenominater());
     }
 
@@ -46,7 +46,7 @@ class FractionTest {
         Fraction newFraction = fraction.mul(new Fraction(1, 2));
         newFraction = newFraction.shorten();
 
-        assertEquals(1, newFraction.getNominator());
+        assertEquals(1, newFraction.getNumerator());
         assertEquals(4, newFraction.getDenominater());
     }
 
@@ -56,7 +56,7 @@ class FractionTest {
         Fraction newFraction = fraction.div(new Fraction(1, 2));
         newFraction = newFraction.shorten();
 
-        assertEquals(1, newFraction.getNominator());
+        assertEquals(1, newFraction.getNumerator());
         assertEquals(1, newFraction.getDenominater());
     }
 
@@ -65,7 +65,7 @@ class FractionTest {
         Fraction f = new Fraction( 3,4);
         Fraction result = f.reciprocal();
 
-        assertEquals(4,result.getNominator());
+        assertEquals(4,result.getNumerator());
         assertEquals(3,result.getDenominater());
     }
 }
