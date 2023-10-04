@@ -35,5 +35,11 @@ jobs:
         path: target/surefire-reports/*.xml    # Path to test results
         reporter: java-junit
         fail-on-error: true # Format of test results
+    - name: Upload JAR artifact
+      uses: actions/upload-artifact@v2
+      if: success()
+      with:
+        name: fraction
+        path: target/*.jar
 
 
