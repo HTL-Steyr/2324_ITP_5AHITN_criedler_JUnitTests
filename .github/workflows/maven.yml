@@ -3,6 +3,10 @@ name: My new CI/CD
 on:
   push:
     branches: [ "master" ]
+permissions:
+  contents: read
+  actions: write
+  checks: write
 
 jobs:
   build:
