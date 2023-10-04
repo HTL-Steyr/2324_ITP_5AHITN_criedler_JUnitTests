@@ -22,5 +22,14 @@ jobs:
 
     - name: Test with Maven
       run: mvn -B test --batch-mode --no-transfer-progress --file pom.xml
+      
+    - name: Test Report
+      uses: dorny/test-reporter@v1
+      if: always()    # run this step even if previous step failed
+      with:
+        name: Maven Tests            # Name of the check run which will be created
+        path: target/surefire-reports/*.xml    # Path to test results
+        reporter: java-junit
+        fail-on-error: true # Format of test results
 
 
